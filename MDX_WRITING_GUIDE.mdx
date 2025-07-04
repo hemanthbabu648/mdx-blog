@@ -1,0 +1,335 @@
+---
+title: "Complete MDX Writing Guide"
+date: "2024-01-15"
+excerpt: "Learn how to write MDX files with all formatting options"
+author: "MDX Blog Team"
+tags: ["mdx", "guide", "tutorial"]
+---
+
+# MDX Writing Guide
+
+This guide shows you how to write MDX files with all the formatting options available.
+
+## Frontmatter
+
+Every MDX file should start with frontmatter between triple dashes:
+
+```yaml
+---
+title: "Your Post Title"
+date: "2024-01-15"
+excerpt: "A brief description of your post"
+author: "Your Name"
+tags: ["tag1", "tag2", "tag3"]
+image: "/images/featured-image.jpg"  # optional
+published: true  # optional
+---
+```
+
+## Headings
+
+You can create headings using hashtags:
+
+# Heading 1
+## Heading 2
+### Heading 3
+#### Heading 4
+##### Heading 5
+###### Heading 6
+
+## Paragraphs
+
+Regular paragraphs are just plain text. You can write them naturally.
+
+This is another paragraph. Notice the blank line between paragraphs.
+
+For line breaks within a paragraph, you can use two spaces at the end of a line  
+or use the HTML break tag <br />
+like this.
+
+## Text Formatting
+
+You can format text in several ways:
+
+- **Bold text** using double asterisks or __double underscores__
+- *Italic text* using single asterisks or _single underscores_
+- ***Bold and italic*** using triple asterisks
+- ~~Strikethrough~~ using double tildes
+- `Inline code` using backticks
+
+## Lists
+
+### Unordered Lists
+
+- First item
+- Second item
+  - Nested item
+  - Another nested item
+    - Deep nested item
+- Third item
+
+### Ordered Lists
+
+1. First step
+2. Second step
+   1. Sub-step A
+   2. Sub-step B
+3. Third step
+
+### Task Lists
+
+- [x] Completed task
+- [ ] Uncompleted task
+- [ ] Another task to do
+
+## Links
+
+- [External link](https://example.com)
+- [Internal link](/blog/another-post)
+- [Link with title](https://example.com "Hover text")
+- Direct URL: https://example.com
+
+## Images
+
+Basic image:
+![Alt text](/images/sample.jpg)
+
+Image with title:
+![Alt text](/images/sample.jpg "Image title")
+
+## Code Blocks
+
+### Inline Code
+
+Use `const variable = "value"` for inline code.
+
+### Code Blocks with Syntax Highlighting
+
+```javascript
+// JavaScript example
+function greet(name) {
+  console.log(`Hello, ${name}!`);
+  return `Welcome to MDX`;
+}
+
+const result = greet("World");
+```
+
+```typescript
+// TypeScript example
+interface User {
+  name: string;
+  age: number;
+  email?: string;
+}
+
+const user: User = {
+  name: "John Doe",
+  age: 30
+};
+```
+
+```css
+/* CSS example */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+```
+
+```bash
+# Bash/Shell example
+npm install
+npm run dev
+```
+
+## Blockquotes
+
+> This is a blockquote. It can span multiple lines.
+> 
+> You can have multiple paragraphs in a blockquote.
+
+> You can also nest blockquotes
+>> Like this nested quote
+>>> And even deeper
+
+## Tables
+
+| Column 1 | Column 2 | Column 3 |
+|----------|----------|----------|
+| Row 1    | Data     | More data|
+| Row 2    | Data     | More data|
+| Row 3    | Data     | More data|
+
+With alignment:
+
+| Left aligned | Center aligned | Right aligned |
+|:-------------|:--------------:|--------------:|
+| Left         | Center         | Right         |
+| Text         | Text           | Text          |
+
+## Horizontal Rules
+
+Use three or more hyphens, asterisks, or underscores:
+
+---
+
+***
+
+___
+
+## HTML in MDX
+
+You can use HTML directly in MDX:
+
+<div style={{backgroundColor: '#f0f0f0', padding: '20px', borderRadius: '8px'}}>
+  <h3>This is HTML</h3>
+  <p>You can use HTML tags and inline styles.</p>
+</div>
+
+## React Components in MDX
+
+You can import and use React components:
+
+```mdx
+import { Button } from '@/components/Button'
+import { Alert } from '@/components/Alert'
+
+<Button onClick={() => alert('Clicked!')}>
+  Click me
+</Button>
+
+<Alert type="info">
+  This is an info alert component
+</Alert>
+```
+
+## JSX Expressions
+
+You can use JSX expressions with curly braces:
+
+The current year is {new Date().getFullYear()}.
+
+2 + 2 = {2 + 2}
+
+## Custom Components
+
+You can create custom components within MDX:
+
+export const Highlight = ({children, color}) => (
+  <span style={{backgroundColor: color || 'yellow', padding: '2px 6px', borderRadius: '4px'}}>
+    {children}
+  </span>
+);
+
+Now use it: <Highlight color="lightblue">This text is highlighted</Highlight>
+
+## Footnotes
+
+Here's a sentence with a footnote[^1].
+
+[^1]: This is the footnote content.
+
+## Math (if configured)
+
+Inline math: $a^2 + b^2 = c^2$
+
+Block math:
+$$
+\frac{n!}{k!(n-k)!} = \binom{n}{k}
+$$
+
+## Emoji
+
+You can use emoji directly: 🚀 🎉 💻 ✨
+
+## Comments
+
+{/* This is a comment in MDX and won't be rendered */}
+
+<!-- This is an HTML comment, also won't be rendered -->
+
+## Escaping
+
+To show literal characters that would normally be formatting, use backslash:
+
+- \*This won't be italic\*
+- \`This won't be code\`
+- \# This won't be a heading
+
+## Best Practices
+
+1. **Start with frontmatter** - Always include metadata
+2. **Use meaningful headings** - Structure your content logically
+3. **Break up long content** - Use headings, lists, and paragraphs
+4. **Add alt text to images** - For accessibility
+5. **Use code blocks for code** - With appropriate language highlighting
+6. **Preview your content** - Check how it renders before publishing
+
+## Example Full Post Structure
+
+```mdx
+---
+title: "Building a REST API with Node.js"
+date: "2024-01-15"
+excerpt: "Learn how to build a scalable REST API"
+author: "John Doe"
+tags: ["nodejs", "api", "backend"]
+---
+
+import { CodeExample } from '@/components/CodeExample'
+
+# Building a REST API with Node.js
+
+## Introduction
+
+In this tutorial, we'll build a REST API...
+
+## Prerequisites
+
+- Node.js installed
+- Basic JavaScript knowledge
+- Understanding of HTTP
+
+## Getting Started
+
+First, let's set up our project:
+
+```bash
+mkdir my-api
+cd my-api
+npm init -y
+```
+
+## Building the Server
+
+Here's our basic server setup:
+
+<CodeExample>
+```javascript
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+  res.json({ message: 'Hello World' });
+});
+
+app.listen(3000);
+```
+</CodeExample>
+
+## Conclusion
+
+You've now built a basic REST API!
+```
+
+## Ending an MDX File
+
+MDX files don't require special ending syntax. Just make sure:
+- All opened tags are closed
+- All code blocks are properly closed with ```
+- The content ends naturally
+- No trailing spaces or unnecessary blank lines
+
+That's it! You're ready to write awesome MDX content! 🚀
