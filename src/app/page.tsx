@@ -16,7 +16,7 @@ export default function Home() {
       {/* Featured Post Section */}
       <section className="py-12 px-4">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-gray-900 mb-8">Latest Blog Posts</h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-8">Stories & Insights</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div>
               <p className="text-lg text-gray-700 mb-6">
