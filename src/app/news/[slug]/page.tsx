@@ -5,9 +5,9 @@ import Link from "next/link";
 import { IoIosArrowBack } from "react-icons/io";
 
 interface NewsPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export async function generateStaticParams() {
