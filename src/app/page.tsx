@@ -32,24 +32,26 @@ export default function Home() {
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div className="col-span-2 lg:col-span-1">
-                <div className="aspect-[3/4] bg-gradient-to-br from-purple-400 to-blue-500 rounded-lg overflow-hidden relative">
+                <div className="hidden lg:block aspect-[3/4] bg-gradient-to-br from-purple-400 to-blue-500 rounded-lg overflow-hidden relative">
                   <Image
                     src="/blogs-hero.jpg"
                     alt='blogs'
                     className="w-full h-full object-cover"
                     fill
                     loading="lazy"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                 </div>
               </div>
               <div className="col-span-2 lg:col-span-1 space-y-4">
-                <div className="aspect-[3/4] lg:aspect-[4/5] bg-gradient-to-br from-cyan-400 to-teal-500 rounded-lg overflow-hidden relative">
+                <div className="hidden md:block aspect-[3/4] lg:aspect-[4/5] bg-gradient-to-br from-cyan-400 to-teal-500 rounded-lg overflow-hidden relative">
                   <Image
                     src="/blogs-hero-1.png"
                     alt='blogs'
                     className="w-full h-full object-fill"
                     fill
                     loading="lazy"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                 </div>
                 <div className="hidden lg:block aspect-[4/3] bg-gradient-to-br from-orange-400 to-red-500 rounded-lg overflow-hidden relative">
@@ -59,6 +61,7 @@ export default function Home() {
                     className="w-full h-full object-fill"
                     fill
                     loading="lazy"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                 </div>
               </div>
@@ -85,6 +88,7 @@ export default function Home() {
                       className="w-full h-full object-fit"
                       fill
                       loading="lazy"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                   )}
                 </div>

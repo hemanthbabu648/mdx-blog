@@ -34,6 +34,7 @@ export default function BlogCard({
             className="w-full h-full object-cover"
             fill
             loading="lazy"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
       ) : (

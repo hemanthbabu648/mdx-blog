@@ -84,6 +84,8 @@ export default function PopularPostsCarousel({ posts }: PopularPostsCarouselProp
           <h2 className="text-3xl font-bold text-gray-900">Popular Posts</h2>
           <div className="flex items-center gap-4">
             <select
+              aria-label="Select category"
+              name="category"
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
               className="px-4 py-2 border border-gray-300 rounded-lg bg-white text-gray-900"
@@ -143,6 +145,7 @@ export default function PopularPostsCarousel({ posts }: PopularPostsCarouselProp
                             className="w-full h-full object-fit"
                             fill
                             loading="lazy"
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                           />
                         )}
                       </div>

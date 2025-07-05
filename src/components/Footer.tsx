@@ -115,7 +115,10 @@ function Footer() {
               <Link href="https://www.hemanthbabu648.com/about-me" className="hover:text-white transition-colors">About Us</Link>
               <Link href="https://www.hemanthbabu648.com/#contact" className="hover:text-white transition-colors">Contact</Link>
             </nav>
-
+            {/* Copyright */}
+            <div className="text-center text-sm text-gray-500 mt-6">
+              &copy; {new Date().getFullYear()} Hemanth Babu Setti. All rights reserved.
+            </div>
             <div className="flex items-center space-x-6">
               <div className="flex space-x-4">
                 <a href="https://www.linkedin.com/in/hemanthbabu648" className="hover:text-white transition-colors">
