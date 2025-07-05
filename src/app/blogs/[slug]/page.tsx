@@ -5,7 +5,6 @@ import Link from "next/link";
 import { ShareButton } from "@/components/ShareButton";
 import { StructuredData } from "@/components/StructuredData";
 import { Metadata } from "next";
-import Image from "next/image";
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -63,6 +62,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const post = getPostBySlug(awaited.slug);
   const baseUrl = 'https://www.blogs.hemanthbabu648.com';
 
+  console.log(post)
+
   return (
     <article className="min-h-screen py-12 px-4">
       <StructuredData
@@ -118,18 +119,6 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </div>
           )}
         </header>
-
-        {post.coverImage && (
-          <div className="mb-12 rounded-xl overflow-hidden shadow-xl relative">
-            <Image
-              src={post.coverImage}
-              alt={post.title}
-              className="w-full h-auto object-cover"
-              fill
-              loading="lazy"
-            />
-          </div>
-        )}
 
         <div className="prose prose-lg prose-indigo max-w-none prose-headings:font-bold prose-h1:text-4xl prose-h2:text-3xl prose-h3:text-2xl prose-code:bg-indigo-50 prose-code:text-indigo-600 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-pre:bg-gray-900 prose-pre:text-gray-100 prose-img:rounded-xl prose-img:shadow-lg prose-a:text-indigo-600 hover:prose-a:text-indigo-700">
           <MDXRemote source={post.content} />

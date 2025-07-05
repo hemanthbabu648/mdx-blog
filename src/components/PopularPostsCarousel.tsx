@@ -140,7 +140,7 @@ export default function PopularPostsCarousel({ posts }: PopularPostsCarouselProp
                           <Image
                             src={post.coverImage}
                             alt={post.title}
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-fit"
                             fill
                             loading="lazy"
                           />

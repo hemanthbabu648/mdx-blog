@@ -82,7 +82,7 @@ export default function Home() {
                     <Image
                       src={post.coverImage}
                       alt={post.title}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-fit"
                       fill
                       loading="lazy"
                     />
@@ -97,7 +97,7 @@ export default function Home() {
                   <h3 className="font-bold text-gray-900 mb-2 line-clamp-2">{post.title}</h3>
                   <p className="text-sm text-gray-600 mb-4 line-clamp-3">{post.excerpt}</p>
                   <Link
-                    href={`/blog/${post.slug}`}
+                    href={`/blogs/${post.slug}`}
                     className="inline-flex items-center text-blue-500 hover:text-blue-600 font-medium text-sm transition-colors"
                   >
                     Read Article

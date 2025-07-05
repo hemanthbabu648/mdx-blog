@@ -1,0 +1,159 @@
+---
+title: Managing Multiple GitHub Accounts on One Machine
+description: A complete step-by-step guide to using separate SSH keys and Git config to manage multiple GitHub accounts on the same system.
+excerpt: Managing multiple GitHub accounts (like personal and work) on the same machine can be tricky if not set up properly. This guide walks you through setting up separate SSH keys, configuring Git, and switching seamlessly between accounts.
+date: 2025-07-05
+author: Hemanth Babu S
+coverImage: "/images/posts/github.webp"
+tags: [git, github, ssh, productivity, developer-tools]
+readTime: "15 min read"
+---
+
+Managing multiple GitHub accounts (like personal and work) on the same machine can
+be tricky if not set up properly. This guide walks you through setting up separate
+SSH keys, configuring Git, and switching seamlessly between accounts.
+
+<br />
+
+![Alt text](/images/posts/github.webp "Git Hub Multiple Accounts")
+
+<br />
+
+## **✅ Prerequisites**
+
+Before diving in, make sure you have:
+
+    - Git installed on your system (`git --version`)
+    - A GitHub account (or two)
+    - Basic knowledge of command line usage
+
+<br />
+
+## **🗝️ Step 1: Generate SSH Keys for Each Account**
+
+We'll generate separate SSH keys for your personal and work accounts.
+
+### **Personal GitHub account**
+
+```bash
+ssh-keygen -t rsa -b 4096 -C "you@example.com" -f ~/.ssh/id_rsa_personal
+```
+
+### **Work GitHub account**
+
+```bash
+ssh-keygen -t rsa -b 4096 -C "you@work.com" -f ~/.ssh/id_rsa_work
+```
+
+This creates two key pairs:
+
+- `~/.ssh/id_rsa_personal` & `~/.ssh/id_rsa_personal.pub`
+- `~/.ssh/id_rsa_work` & `~/.ssh/id_rsa_work.pub`
+
+<br />
+## **🔗 Step 2: Add SSH Keys to GitHub**
+
+1. Go to GitHub → **Settings** → **SSH and GPG keys** → **New SSH key**
+2. Add:
+
+   - For personal: `id_rsa_personal.pub`
+   - For work: `id_rsa_work.pub`
+
+3. Use a meaningful title for each key (e.g., “Personal Laptop”, “Work Laptop”).
+
+<br />
+## **🧼 Step 3: Adding SSH Keys to the SSH Agent**
+
+Run these commands in your terminal:
+
+```bash
+eval "$(ssh-agent -s)"
+
+ssh-add ~/.ssh/id_rsa_personal
+ssh-add ~/.ssh/id_rsa_work
+```
+
+Repeat these steps for each GitHub account, replacing file paths with the correct key names.
+
+<br />
+## **🛠️ Step 4: Create or Edit SSH Config**
+
+Open (or create) your SSH config file:
+
+```bash
+nano ~/.ssh/config
+```
+
+Add the following:
+
+```ssh
+# Personal GitHub account
+Host github.com-personal
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_rsa_personal
+
+# Work GitHub account
+Host github.com-work
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_rsa_work
+```
+
+<br />
+
+## **🧪 Step 5: Test SSH Connections**
+
+```bash
+ssh -T git@github.com-personal
+ssh -T git@github.com-work
+```
+
+You should see:
+
+> Hi `<username>`! You've successfully authenticated… for both.
+
+<br />
+
+## **📂 Step 6: Clone Repositories with Correct Host**
+
+When cloning, use the correct host alias:
+
+```bash
+# Personal repo
+git clone git@github.com-personal:your-username/repo-name.git
+
+# Work repo
+git clone git@github.com-work:work-username/repo-name.git
+```
+
+<br />
+## **🔧 Step 7: Set Git Identity Per Project**
+
+You can set identity per project:
+
+```bash
+cd ~/path/to/personal-repo
+git config user.name "Your Name"
+git config user.email "you@example.com"
+
+cd ~/path/to/work-repo
+git config user.name "Your Work Name"
+git config user.email "you@work.com"
+```
+
+<br />
+
+---
+
+## **🧠 Conclusion**
+
+Managing multiple GitHub accounts on the same machine is totally doable with a little SSH and Git config magic. By separating your keys and using SSH aliases, you can avoid headaches and context-switch seamlessly.
+
+<br />
+
+Now you can:
+
+✅ Work with both personal and professional repos  
+✅ Keep identities clean and separate  
+✅ Avoid constant re-authentication or mistakes

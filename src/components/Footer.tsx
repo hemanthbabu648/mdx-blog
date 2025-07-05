@@ -82,6 +82,7 @@ function Footer() {
                 render={({ field }) => (
                   <input
                     {...field}
+                    name="email"
                     type="email"
                     placeholder="Enter your email"
                     className={`flex-1 px-4 py-3 rounded-lg bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 ${errors?.email && 'ring-2 ring-red-400'}`}

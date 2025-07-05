@@ -15,7 +15,7 @@ export interface NewsData {
 }
 
 export function getNewsSlugs() {
-  return fs.readdirSync(newsDirectory);
+  return fs.readdirSync(newsDirectory); // .filter((slug) => slug.endsWith(".mdx"));
 }
 
 export function getNewsBySlug(slug: string): NewsData {
