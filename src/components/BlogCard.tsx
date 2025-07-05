@@ -33,6 +33,7 @@ export default function BlogCard({
             alt={title}
             className="w-full h-full object-cover"
             fill
+            loading="lazy"
           />
         </div>
       ) : (

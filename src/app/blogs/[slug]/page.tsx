@@ -124,8 +124,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             <Image
               src={post.coverImage}
               alt={post.title}
-              className="w-full h-auto"
+              className="w-full h-auto object-cover"
               fill
+              loading="lazy"
             />
           </div>
         )}

@@ -142,6 +142,7 @@ export default function PopularPostsCarousel({ posts }: PopularPostsCarouselProp
                             alt={post.title}
                             className="w-full h-full object-cover"
                             fill
+                            loading="lazy"
                           />
                         )}
                       </div>

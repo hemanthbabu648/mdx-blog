@@ -38,6 +38,7 @@ export default function Home() {
                     alt='blogs'
                     className="w-full h-full object-cover"
                     fill
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -48,6 +49,7 @@ export default function Home() {
                     alt='blogs'
                     className="w-full h-full object-fill"
                     fill
+                    loading="lazy"
                   />
                 </div>
                 <div className="hidden lg:block aspect-[4/3] bg-gradient-to-br from-orange-400 to-red-500 rounded-lg overflow-hidden relative">
@@ -56,6 +58,7 @@ export default function Home() {
                     alt='blogs'
                     className="w-full h-full object-fill"
                     fill
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -81,6 +84,7 @@ export default function Home() {
                       alt={post.title}
                       className="w-full h-full object-cover"
                       fill
+                      loading="lazy"
                     />
                   )}
                 </div>
