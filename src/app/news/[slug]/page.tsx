@@ -59,7 +59,7 @@ export default async function NewsItemPage({ params }: NewsPageProps) {
           </p>
         </header>
 
-        <div className="prose prose-lg prose-blue max-w-none prose-headings:font-bold prose-h1:text-4xl prose-h2:text-3xl prose-h3:text-2xl prose-code:bg-gray-100 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-pre:bg-gray-900 prose-pre:text-gray-100 prose-img:rounded-lg prose-a:text-blue-500 hover:prose-a:text-blue-600">
+        <div className="prose prose-lg prose-blue max-w-none prose-headings:font-bold prose-h1:text-4xl prose-h2:text-3xl prose-h3:text-2xl prose-code:bg-gray-100 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-pre:bg-gray-900 prose-pre:text-gray-100 prose-img:rounded-lg prose-a:text-blue-500 hover:prose-a:text-blue-600 overflow-x-auto break-words">
           <MDXRemote source={newsItem.content} />
         </div>
 
