@@ -1,6 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const allowedOrigins = ["http://localhost:3000", "https://hemanthbabu648.com"];
+const allowedOrigins = [
+  "http://localhost:3000",
+  "https://hemanthbabu648.com",
+  "https://www.hemanthbabu648.com",
+];
 
 export function withCors(
   handler: (req: NextRequest) => Promise<NextResponse> | NextResponse
