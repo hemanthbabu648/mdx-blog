@@ -1,7 +1,8 @@
+import { withCors } from "@/lib/cors";
 import { getAllNews } from "@/lib/news";
 import { NextResponse } from "next/server";
 
-export async function GET() {
+const handler = async () => {
   try {
     const news = getAllNews();
 
@@ -32,4 +33,6 @@ export async function GET() {
       status: 500,
     });
   }
-}
+};
+
+export const GET = withCors(handler);

@@ -1,7 +1,8 @@
 import { getAllPosts } from "@/lib/mdx";
 import { NextResponse } from "next/server";
+import { withCors } from "@/lib/cors";
 
-export async function GET() {
+const handler = async () => {
   try {
     const posts = getAllPosts();
 
@@ -46,4 +47,6 @@ export async function GET() {
       status: 500,
     });
   }
-}
+};
+
+export const GET = withCors(handler);
