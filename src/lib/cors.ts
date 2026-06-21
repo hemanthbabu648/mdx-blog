@@ -2,12 +2,12 @@ import { NextRequest, NextResponse } from "next/server";
 
 const allowedOrigins = [
   "http://localhost:3000",
-  "https://hemanthbabu648.com",
-  "https://www.hemanthbabu648.com",
+  "https://hemanthbabu.com",
+  "https://www.hemanthbabu.com",
 ];
 
 export function withCors(
-  handler: (req: NextRequest) => Promise<NextResponse> | NextResponse
+  handler: (req: NextRequest) => Promise<NextResponse> | NextResponse,
 ) {
   return async (req: NextRequest) => {
     const origin = req.headers.get("origin") || "";
@@ -30,11 +30,11 @@ export function withCors(
 
     response.headers.set(
       "Access-Control-Allow-Origin",
-      isAllowed ? origin : ""
+      isAllowed ? origin : "",
     );
     response.headers.set(
       "Access-Control-Allow-Methods",
-      "GET,POST,PUT,DELETE,OPTIONS"
+      "GET,POST,PUT,DELETE,OPTIONS",
     );
     response.headers.set("Access-Control-Allow-Headers", "Content-Type");
 

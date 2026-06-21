@@ -33,7 +33,7 @@ export default function Header() {
 
             {/* Logo */}
             <Link
-              href="https://www.hemanthbabu648.com"
+              href="https://www.hemanthbabu.com"
               className="flex items-center space-x-2 text-gray-700 hover:text-gray-900 flex-shrink-0"
             >
               <div className="w-8 h-8 bg-gradient-to-br from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
@@ -53,10 +53,10 @@ export default function Header() {
               <Link href="/news" className="text-gray-700 hover:text-gray-900 font-medium transition-colors">
                 News
               </Link>
-              <Link href="https://www.hemanthbabu648.com/about-me" className="text-gray-700 hover:text-gray-900 font-medium transition-colors">
+              <Link href="https://www.hemanthbabu.com/about-me" className="text-gray-700 hover:text-gray-900 font-medium transition-colors">
                 About
               </Link>
-              <Link href="https://www.hemanthbabu648.com/#contact" className="text-gray-700 hover:text-gray-900 font-medium transition-colors">
+              <Link href="https://www.hemanthbabu.com/#contact" className="text-gray-700 hover:text-gray-900 font-medium transition-colors">
                 Contact
               </Link>
             </nav>
@@ -110,10 +110,10 @@ export default function Header() {
               <Link href="/news" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">
                 News
               </Link>
-              <Link href="https://www.hemanthbabu648.com/about-me" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">
+              <Link href="https://www.hemanthbabu.com/about-me" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">
                 About
               </Link>
-              <Link href="https://www.hemanthbabu648.com/#contact" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">
+              <Link href="https://www.hemanthbabu.com/#contact" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">
                 Contact
               </Link>
             </div>

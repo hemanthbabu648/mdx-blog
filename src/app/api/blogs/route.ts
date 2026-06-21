@@ -28,8 +28,8 @@ const handler = async () => {
           author,
           coverImage,
           readTime,
-          url: `https://blogs.hemanthbabu648.com/blogs/${slug}`,
-        })
+          url: `https://blogs.hemanthbabu.com/blogs/${slug}`,
+        }),
       );
     return NextResponse.json({
       data: {

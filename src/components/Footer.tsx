@@ -112,8 +112,8 @@ function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <nav className="flex space-x-6">
               <Link href="/" className="hover:text-white transition-colors">Home</Link>
-              <Link href="https://www.hemanthbabu648.com/about-me" className="hover:text-white transition-colors">About Us</Link>
-              <Link href="https://www.hemanthbabu648.com/#contact" className="hover:text-white transition-colors">Contact</Link>
+              <Link href="https://www.hemanthbabu.com/about-me" className="hover:text-white transition-colors">About Us</Link>
+              <Link href="https://www.hemanthbabu.com/#contact" className="hover:text-white transition-colors">Contact</Link>
             </nav>
             {/* Copyright */}
             <div className="text-center text-sm text-gray-500 mt-6">
@@ -121,13 +121,13 @@ function Footer() {
             </div>
             <div className="flex items-center space-x-6">
               <div className="flex space-x-4">
-                <a href="https://www.linkedin.com/in/hemanthbabu648" className="hover:text-white transition-colors">
+                <a href="https://www.linkedin.com/in/hemanthbabu" className="hover:text-white transition-colors">
                   <FaLinkedin size={24} />
                 </a>
-                <a href="https://twitter.com/hemanthbabu648" className="hover:text-white transition-colors">
+                <a href="https://twitter.com/hemanthbabu" className="hover:text-white transition-colors">
                   <FaTwitter size={24} />
                 </a>
-                <a href="https://t.me/hemanthbabu648" className="hover:text-white transition-colors">
+                <a href="https://t.me/hemanthbabu" className="hover:text-white transition-colors">
                   <FaTelegramPlane size={24} />
                 </a>
               </div>

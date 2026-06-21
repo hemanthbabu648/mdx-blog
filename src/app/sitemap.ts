@@ -3,8 +3,8 @@ import { getAllPosts } from "@/lib/mdx";
 import { getAllNews } from "@/lib/news";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://www.blogs.hemanthbabu648.com";
-  const baseUrl1 = "https://www.hemanthbabu648.com";
+  const baseUrl = "https://www.blogs.hemanthbabu.com";
+  const baseUrl1 = "https://www.hemanthbabu.com";
 
   // Get all blog posts
   const posts = getAllPosts();

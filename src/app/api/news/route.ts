@@ -15,7 +15,7 @@ const handler = async () => {
         excerpt,
         date,
         readTime,
-        url: `https://blogs.hemanthbabu648.com/news/${slug}`,
+        url: `https://blogs.hemanthbabu.com/news/${slug}`,
       }));
     return NextResponse.json({
       data: {

@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://www.blogs.hemanthbabu648.com"),
+  metadataBase: new URL("https://www.blogs.hemanthbabu.com"),
   openGraph: {
     title: "Hemanth Babu S | Stories & Insights",
     description: "Discover insightful articles about web development, Next.js, React, React Native, and modern JavaScript technologies.",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     title: "Hemanth Babu S | Stories & Insights",
     description: "Discover insightful articles about web development, Next.js, React, React Native, and modern JavaScript technologies.",
     images: ["/logo.svg"],
-    creator: "@hemanthbabu648",
+    creator: "@hemanthbabu",
   },
   robots: {
     index: true,

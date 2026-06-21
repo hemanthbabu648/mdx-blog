@@ -15,7 +15,7 @@ interface BlogPostPageProps {
 export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
   const awaited = await params;
   const post = getPostBySlug(awaited.slug);
-  const baseUrl = 'https://www.blogs.hemanthbabu648.com'
+  const baseUrl = 'https://www.blogs.hemanthbabu.com'
 
   return {
     title: post.title,
@@ -60,7 +60,7 @@ export async function generateStaticParams() {
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const awaited = await params;
   const post = getPostBySlug(awaited.slug);
-  const baseUrl = 'https://www.blogs.hemanthbabu648.com';
+  const baseUrl = 'https://www.blogs.hemanthbabu.com';
 
   console.log(post)
 
